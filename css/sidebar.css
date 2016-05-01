@@ -1,0 +1,197 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+/* Please Keep this font import at the very top of any CSS file */
+@charset "UTF-8";
+/* Starter CSS for Flyout Menu */
+#smenu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 1;
+}
+#smenu li{border-top:1px solid #fff;}
+#smenu ul,
+#smenu ul li,
+#smenu ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#smenu ul {
+  position: relative;
+  z-index: 597;
+  float: left;
+}
+#smenu ul li {
+  float: left;
+  min-height: 1px;
+  line-height: 1em;
+  vertical-align: middle;
+  position: relative;
+}
+#smenu ul li.hover,
+#smenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#smenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 598;
+  width: 100%;
+}
+#smenu ul ul li {
+  float: none;
+}
+#smenu ul ul ul {
+  top: -2px;
+  right: 0;
+}
+#smenu ul li:hover > ul {
+  visibility: visible;
+}
+#smenu ul ul {
+  top: 1px;
+  left: 99%;
+}
+#smenu ul li {
+  float: none;
+}
+#smenu ul ul {
+  margin-top: 1px;
+}
+#smenu ul ul li {
+  font-weight: normal;
+}
+/* Custom CSS Styles */
+#smenu {
+  width: 200px;
+  background: #333333;
+  font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+  zoom: 1;
+  font-size: 12px;
+}
+#smenu:before {
+  content: '';
+  display: block;
+}
+#smenu:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#smenu a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#smenu > ul {
+  width: 200px;
+}
+#smenu ul ul {
+  width: 200px;
+}
+#smenu > ul > li > a {
+  border-right: 2px solid #ffffff;
+  color: #ffffff;
+}
+#smenu > ul > li > a:hover {
+  color: #ffffff;
+}
+#smenu > ul > li.active a {
+  background: #1b9bff;
+}
+#smenu > ul > li a:hover,
+#smenu > ul > li:hover a {
+  background: #1b9bff;
+}
+#smenu li {
+  position: relative;
+}
+#smenu ul li.has-sub > a:after {
+  content: '>>';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -6px;
+}
+#smenu ul ul li.first {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+#smenu ul ul li.last {
+  -webkit-border-radius: 0 0 3px 0;
+  -moz-border-radius: 0 0 3px 0;
+  border-radius: 0 0 3px 0;
+  border-bottom: 0;
+}
+#smenu ul ul {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+#smenu ul ul {
+  border: 1px solid #0082e7;
+}
+#smenu ul ul a {
+  font-size: 12px;
+  color: #ffffff;
+}
+#smenu ul ul a:hover {
+  color: #ffffff;
+}
+#smenu ul ul li {
+  border-bottom: 1px solid #0082e7;
+}
+#smenu ul ul li:hover > a {
+  background: #4eb1ff;
+  color: #ffffff;
+}
+#smenu.align-right > ul > li > a {
+  border-left: 4px solid #1b9bff;
+  border-right: none;
+}
+#smenu.align-right {
+  float: right;
+}
+#smenu.align-right li {
+  text-align: right;
+}
+#smenu.align-right ul li.has-sub > a:before {
+  content: '>>';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -6px;
+}
+#smenu.align-right ul li.has-sub > a:after {
+  content: none;
+}
+#smenu.align-right ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 598;
+  width: 100%;
+}
+#smenu.align-right ul ul li.first {
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+#smenu.align-right ul ul li.last {
+  -webkit-border-radius: 0 0 0 3px;
+  -moz-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+}
+#smenu.align-right ul ul {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="images/nit.png" href="favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=1,initial-scale=1,user-scalable=1" />
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles_3.css" />
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/formValidation.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/formValidation.js"></script>
+    <script type="text/javascript" src="js/framework/bootstrap.js"></script>
+</head>
+<body>
+	<section class="container login-form">
+		<section>
+			<form id="defaultForm" method="post" action="#" role="login">
+				<h3><strong>User Login</strong></h3>
+				<div class="form-group">
+					<input type="email" name="email" required class="form-control" placeholder="Email address" />
+				</div>
+				
+				<div class="form-group">
+					<input type="password" name="password" required class="form-control" placeholder="Password" />
+				</div>
+				<button type="submit"  class="btn btn-primary btn-block">Login Now</button>
+				Not yet a member ? <a href="register.html">Register now</a></br>
+				<a href="index.html">Return to Home</a>
+			</form>
+		</section>
+	</section>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#defaultForm').formValidation({
+        message: 'This value is not valid',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and can\'t be empty'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            },
+            pwd: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required and can\'t be empty'
+                    }
+                }
+            },
+        }
+    });
+});
+</script>
+</body>
+</html>

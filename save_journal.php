@@ -1,0 +1,13 @@
+<?php
+	include('connect.php');
+?>
+<?php
+	$n=-1;
+	if(isset($_POST['Submit']))
+	{
+		$jname=$_POST['jname'];
+		$jlink=$_POST['jlink'];
+		$n=save($jname,$jlink);
+		header('Location:ejournal.php?result='.$jname);
+	}	
+?>
